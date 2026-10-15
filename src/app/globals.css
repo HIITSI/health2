@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+:root {
+  --background: #f6f8fc;
+  --card: #fff;
+  --foreground: #17243b;
+  --muted: #eef2f8;
+  --subtle: #68778e;
+  --border: #e7ecf3;
+}
+.dark {
+  --background: #101725;
+  --card: #182235;
+  --foreground: #edf3ff;
+  --muted: #243149;
+  --subtle: #a2afc4;
+  --border: #2b3950;
+  color-scheme: dark;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--foreground);
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+a {
+  text-decoration: none;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+}
+.subtle {
+  color: var(--subtle);
+}
+.field {
+  margin-bottom: 20px;
+}
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
